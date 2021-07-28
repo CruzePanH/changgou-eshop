@@ -23,10 +23,13 @@ public class SkuController {
      * @return
      */
     @GetMapping(value = "/list")
-    public String search(@RequestParam(required = false) Map searchMap, Model model){
+    public String search(@RequestParam(required = false) Map<String,String> searchMap, Model model){
         //调用changgou-service-search微服务
-        Map resultMap = skuFeign.search(searchMap);
+        Map<String,Object> resultMap = skuFeign.search(searchMap);
+        //搜索数据结果
         model.addAttribute("result",resultMap);
+        //搜索条件
+        model.addAttribute("searchMap",searchMap);
         return "search";
     }
 }
