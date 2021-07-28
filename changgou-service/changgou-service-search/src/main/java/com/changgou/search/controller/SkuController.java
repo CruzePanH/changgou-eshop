@@ -3,6 +3,7 @@ package com.changgou.search.controller;
 import com.changgou.search.service.SkuService;
 import entity.Result;
 import entity.StatusCode;
+import org.apache.ibatis.mapping.ResultMap;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -31,8 +32,9 @@ public class SkuController {
      * @param searchMap
      * @return
      */
-    @PostMapping
-    public Map search(@RequestBody(required = false) Map searchMap){
-        return  skuService.search(searchMap);
+    @GetMapping
+    public Map search(@RequestParam(required = false) Map searchMap){
+        Map resultMap = skuService.search(searchMap);
+        return resultMap;
     }
 }
