@@ -69,12 +69,12 @@ public interface SpuFeign {
     Result add(@RequestBody Spu spu);
 
     /***
-     * 根据ID查询Spu数据
+     * 根据SpuID查询Spu信息
      * @param id
      * @return
      */
     @GetMapping("/{id}")
-    Result<Spu> findById(@PathVariable Long id);
+    public Result<Spu> findById(@PathVariable(name = "id") Long id);
 
     /***
      * 查询Spu全部数据

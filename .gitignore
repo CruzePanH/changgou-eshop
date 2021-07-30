@@ -276,3 +276,5 @@ changgou-eureka/target/classes/application.yml
 .idea/libraries/Maven__org_springframework_amqp_spring_amqp_2_1_5_RELEASE.xml
 .idea/libraries/Maven__org_attoparser_attoparser_2_0_5_RELEASE.xml
 .idea/libraries/Maven__com_rabbitmq_amqp_client_5_4_3.xml
+.idea/libraries/Maven__ognl_ognl_3_1_12.xml
+.idea/libraries/Maven__org_javassist_javassist_3_20_0_GA.xml

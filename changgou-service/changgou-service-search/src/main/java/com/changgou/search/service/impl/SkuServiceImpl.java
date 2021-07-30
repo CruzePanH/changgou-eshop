@@ -177,6 +177,10 @@ public class SkuServiceImpl implements SkuService {
         resultMap.put("total", skuPage.getTotalElements());
         resultMap.put("totalPages", skuPage.getTotalPages());
 
+        //分页数据保存
+        //设置当前页码
+        resultMap.put("pageNum", pageNum);
+        resultMap.put("pageSize", 30);
         return resultMap;
     }
 

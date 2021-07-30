@@ -68,13 +68,13 @@ public interface CategoryFeign {
     @PostMapping
     Result add(@RequestBody Category category);
 
-    /***
-     * 根据ID查询Category数据
+    /**
+     * 获取分类的对象信息
      * @param id
      * @return
      */
     @GetMapping("/{id}")
-    Result<Category> findById(@PathVariable Integer id);
+    public Result<Category> findById(@PathVariable(name = "id") Integer id);
 
     /***
      * 查询Category全部数据

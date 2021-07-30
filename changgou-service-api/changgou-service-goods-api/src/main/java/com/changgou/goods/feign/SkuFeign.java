@@ -35,13 +35,13 @@ public interface SkuFeign {
     @GetMapping(value = "/search/{page}/{size}" )
     Result<PageInfo> findPage(@PathVariable  int page, @PathVariable  int size);
 
-    /***
-     * 多条件搜索品牌数据
+    /**
+     * 根据条件搜索
      * @param sku
      * @return
      */
     @PostMapping(value = "/search" )
-    Result<List<Sku>> findList(@RequestBody(required = false) Sku sku);
+    public Result<List<Sku>> findList(@RequestBody(required = false) Sku sku);
 
     /***
      * 根据ID删除品牌数据
