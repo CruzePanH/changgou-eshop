@@ -300,3 +300,4 @@ changgou-eureka/target/classes/application.yml
 .idea/libraries/Maven__org_springframework_spring_webflux_5_1_6_RELEASE.xml
 .idea/libraries/Maven__org_synchronoss_cloud_nio_multipart_parser_1_1_0.xml
 .idea/libraries/Maven__org_synchronoss_cloud_nio_stream_storage_1_1_3.xml
+.idea/libraries/Maven__io_jsonwebtoken_jjwt_0_9_0.xml
