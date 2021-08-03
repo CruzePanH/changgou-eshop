@@ -11,6 +11,7 @@ import entity.StatusCode;
 import org.apache.http.HttpResponse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.web.servlet.server.Session;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.Cookie;
@@ -79,6 +80,7 @@ public class UserController {
      * @param id
      * @return
      */
+    @PreAuthorize("hasAnyAuthority('admin')")
     @DeleteMapping(value = "/{id}" )
     public Result delete(@PathVariable String id){
         //调用UserService实现根据主键删除

@@ -67,7 +67,8 @@ public class AuthorizeFilter implements GlobalFilter, Ordered {
         try {
             Claims claims = JwtUtil.parseJWT(tokent);
             //将令牌数据添加到头文件中
-            request.mutate().header(AUTHORIZE_TOKEN,claims.toString());
+            //request.mutate().header(AUTHORIZE_TOKEN,claims.toString());
+            request.mutate().header(AUTHORIZE_TOKEN,"Bearer"+tokent);
         } catch (Exception e) {
             e.printStackTrace();
             //解析失败，响应401错误
